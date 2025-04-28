@@ -1,0 +1,25 @@
+.title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.navLink {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 550;
+}
+
+.bookButton {
+  border-radius: 24px;
+  font-weight: 600;
+  padding: 0.4em 1.5em;
+  letter-spacing: 0.5px;
+  box-shadow: none;
+}
+
+.container {
+  width: 100%;
+} 
