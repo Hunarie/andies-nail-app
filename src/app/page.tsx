@@ -10,7 +10,7 @@ import { useCalendlyModal } from './hooks/useCalendlyModal';
 
 export default function Home() {
   const { isOpen, openModal, closeModal } = useCalendlyModal();
-  // Test
+  
   return (
     <AppShell
       header={{ height: 140 }}
