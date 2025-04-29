@@ -2,6 +2,7 @@
 
 import { Modal } from "@mantine/core";
 import { InlineWidget } from "react-calendly";
+import { useMediaQuery } from "@mantine/hooks";
 
 interface CalendlyModalProps {
   opened: boolean;
@@ -9,6 +10,8 @@ interface CalendlyModalProps {
 }
 
 export default function CalendlyModal({ opened, onClose }: CalendlyModalProps) {
+  const isMobile = useMediaQuery("(max-width: 48em)") ?? false;
+
   return (
     <Modal
       opened={opened}
@@ -19,19 +22,22 @@ export default function CalendlyModal({ opened, onClose }: CalendlyModalProps) {
       padding={0}
       styles={{
         content: {
-          maxWidth: "1000px",
-          width: "90%",
+          maxWidth: isMobile ? "100%" : "1000px",
+          width: isMobile ? "100%" : "90%",
           overflow: "hidden",
+          height: isMobile ? "100%" : "auto",
+          maxHeight: isMobile ? "100vh" : "90vh",
         },
         body: {
           padding: 0,
           overflow: "hidden",
+          height: "100%",
         },
       }}
     >
       <div
         style={{
-          height: "min(800px, 90vh)",
+          height: isMobile ? "100%" : "min(800px, 90vh)",
           width: "100%",
           overflow: "hidden",
         }}

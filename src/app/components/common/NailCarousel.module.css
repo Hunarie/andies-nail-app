@@ -26,3 +26,24 @@
   background: rgba(255, 255, 255, 0.45);
   transform: translateX(-50%) scale(1.02);
 }
+
+.mobileBookButton {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(196, 103, 134, 0.35);
+  color: white;
+  border: 1.5px solid #fff;
+  backdrop-filter: blur(8px);
+}
+
+.mobileBookButton:hover {
+  background: rgba(196, 103, 134, 0.45);
+  transform: scale(1.02);
+}
