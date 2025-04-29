@@ -1,5 +1,4 @@
 .title {
-  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 48px;
   margin-top: 10px;
@@ -9,7 +8,10 @@
 .navLink {
   text-decoration: none;
   color: inherit;
-  font-weight: 550;
+  font-weight: 650;
+}
+.navLink:hover {
+  color: #c46786;
 }
 
 .bookButton {
@@ -19,7 +21,22 @@
   letter-spacing: 0.5px;
   box-shadow: none;
 }
-
+.bookButton:hover {
+  color: #c46786;
+  border-color: #c46786;
+}
 .container {
   width: 100%;
+}
+
+.instagramIcon {
+  color: inherit;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagramIcon:hover {
+  color: #c46786;
 } 

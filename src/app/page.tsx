@@ -16,6 +16,13 @@ export default function Home() {
       header={{ height: 140 }}
       footer={{ height: 40 }}
       padding={0}
+      styles={{
+        main: {
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+        }
+      }}
     >
       <AppShell.Header withBorder className={styles.header}>
         <Header onBookClick={openModal} />
@@ -24,6 +31,8 @@ export default function Home() {
       <AppShell.Main className={styles.main}>
         <Container 
           size="100%" 
+          h="100%"
+          p={0}
           className={styles.container}
         >
           <NailCarousel onBookClick={openModal} />

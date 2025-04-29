@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Akaya_Kanadaka } from "next/font/google";
 import { createTheme, MantineProvider, ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
 import '@mantine/core/styles.css';
 import "./globals.css";
@@ -14,17 +14,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair-display",
+const akayaKanadaka = Akaya_Kanadaka({
+  variable: "--font-akaya-kanadaka",
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["400"],
 });
 
 const theme = createTheme({
   primaryColor: 'pink',
   fontFamily: 'var(--font-geist-sans)',
   headings: {
-    fontFamily: 'var(--font-playfair-display)',
+    fontFamily: 'var(--font-akaya-kanadaka)',
   },
 });
 
@@ -43,7 +43,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${akayaKanadaka.variable}`}>
         <MantineProvider theme={theme}>
           {children}
         </MantineProvider>
