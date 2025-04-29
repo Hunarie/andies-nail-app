@@ -10,8 +10,8 @@
   bottom: 32px;
   transform: translateX(-50%);
   z-index: 2;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-  background: rgba(255,255,255,0.35);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.35);
   color: #fff;
   border-radius: 32px;
   backdrop-filter: blur(8px);
@@ -23,6 +23,6 @@
 }
 
 .bookButton:hover {
-  background: rgba(255,255,255,0.45);
+  background: rgba(255, 255, 255, 0.45);
   transform: translateX(-50%) scale(1.02);
-} 
+}

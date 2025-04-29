@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export const useCalendlyModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,4 +11,4 @@ export const useCalendlyModal = () => {
     openModal,
     closeModal,
   };
-}; 
+};

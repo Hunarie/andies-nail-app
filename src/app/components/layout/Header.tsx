@@ -1,7 +1,8 @@
-import { Button, Group, Stack, Title, Text, Anchor } from '@mantine/core';
-import { IconBrandInstagram } from '@tabler/icons-react';
-import Link from 'next/link';
-import styles from './Header.module.css';
+import { Button, Group, Stack, Title, Text, Anchor } from "@mantine/core";
+import { IconBrandInstagram, IconBrandTiktok } from "@tabler/icons-react";
+import Link from "next/link";
+import styles from "./Header.module.css";
+import { imperialScript } from "@/app/fonts";
 
 interface HeaderProps {
   onBookClick: () => void;
@@ -9,44 +10,52 @@ interface HeaderProps {
 
 export default function Header({ onBookClick }: HeaderProps) {
   return (
-    <Stack align="center" gap={0} className={styles.container}>
-      <Link href="/" style={{ textDecoration: 'none' }}>
-        <Title 
-          order={1} 
-          className={styles.title}
-          style={{ fontFamily: 'var(--font-akaya-kanadaka)' }}
-        >
-          Andie&apos;s Nail Bar
+    <Stack className={styles.stack}>
+      <Link href="/" className={styles.link}>
+        <Title className={`${styles.title} ${imperialScript.className}`}>
+          Andie Orozco&apos;s Nails
         </Title>
       </Link>
-      <Group gap={40} mt="sm" justify="center" w="100%" pos="relative">
-        <Group gap={40}>
-          <Text component={Link} href="/" className={styles.navLink}>Home</Text>
-          <Text component={Link} href="/services" className={styles.navLink}>Services</Text>
-          <Text component={Link} href="/gallery" className={styles.navLink}>Gallery</Text>
-          <Text component={Link} href="/about" className={styles.navLink}>About</Text>
-          <Text component={Link} href="/contact" className={styles.navLink}>Contact</Text>
-          <Button
-            variant="outline"
-            color="dark"
-            size="md"
-            className={styles.bookButton}
-            onClick={onBookClick}
-          >
+      <Group className={styles.group}>
+        <Group className={styles.linkGroup}>
+          <Text component={Link} href="/" className={styles.navLink}>
+            Home
+          </Text>
+          <Text component={Link} href="/services" className={styles.navLink}>
+            Services
+          </Text>
+          <Text component={Link} href="/gallery" className={styles.navLink}>
+            Gallery
+          </Text>
+          <Text component={Link} href="/about" className={styles.navLink}>
+            About
+          </Text>
+          <Text component={Link} href="/contact" className={styles.navLink}>
+            Contact
+          </Text>
+          <Button className={styles.bookButton} onClick={onBookClick}>
             Book Now
           </Button>
         </Group>
-        <Anchor 
-          href="https://www.instagram.com/andiee.orozco2/" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className={styles.instagramIcon}
-          pos="absolute"
-          right="2rem"
-        >
-          <IconBrandInstagram size={24} />
-        </Anchor>
+        <Group className={styles.iconGroup}>
+          <Anchor
+            href="https://www.tiktok.com/@andieorozco4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.iconAnchor}
+          >
+            <IconBrandTiktok className={styles.icons} />
+          </Anchor>
+          <Anchor
+            href="https://www.instagram.com/andiee.orozco2/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.iconAnchor}
+          >
+            <IconBrandInstagram className={styles.icons} />
+          </Anchor>
+        </Group>
       </Group>
     </Stack>
   );
-} 
+}

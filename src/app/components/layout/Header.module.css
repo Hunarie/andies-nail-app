@@ -1,42 +1,71 @@
 .title {
-  font-weight: 700;
   font-size: 48px;
   margin-top: 10px;
-  margin-bottom: 0;
+  color: black;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.stack {
+  gap: 0px;
+  align-items: center;
+}
+
+.group {
+  gap: 40px;
+  margin-top: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.linkGroup {
+  gap: 40px;
+}
+
+.iconGroup {
+  gap: 15px;
+  position: absolute;
+  right: 2rem;
 }
 
 .navLink {
-  text-decoration: none;
-  color: inherit;
   font-weight: 650;
+  transition: color 0.2s ease;
 }
 .navLink:hover {
   color: #c46786;
 }
 
 .bookButton {
-  border-radius: 24px;
-  font-weight: 600;
+  font-weight: 650;
   padding: 0.4em 1.5em;
-  letter-spacing: 0.5px;
-  box-shadow: none;
+  border-radius: 24px;
+  border-width: 2px;
+  border-style: solid;
+  color: black;
+  border-color: black;
+  background-color: transparent;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 .bookButton:hover {
   color: #c46786;
   border-color: #c46786;
-}
-.container {
-  width: 100%;
+  background-color: transparent;
 }
 
-.instagramIcon {
+.iconAnchor {
   color: inherit;
   transition: color 0.2s ease;
   display: flex;
-  align-items: center;
-  justify-content: center;
+}
+.iconAnchor:hover {
+  color: #c46786;
 }
 
-.instagramIcon:hover {
-  color: #c46786;
-} 
+.icons {
+  size: 24px;
+}
